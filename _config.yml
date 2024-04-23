@@ -75,7 +75,7 @@ ga_domain: huangxuan.me
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "Just believe in your self, ...and always be brave."
-sidebar-avatar: /img/404-bg.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/tomato.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
