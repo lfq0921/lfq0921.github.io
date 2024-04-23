@@ -1,7 +1,7 @@
 # Site settings
 title: Fanqi Blog
 SEOTitle: 林凡琪的博客 | Fanqi Blog
-header-img: /img/home-bg-sunrise.jpg
+header-img: img/home-bg-sunrise.jpg
 email: vanky0921@gmail.com
 description: "Far Far Away"
 keyword: "林凡琪, blog, Fanqi Lin"
@@ -19,6 +19,7 @@ github_username: lfq0921
 #twitter_username: huxpro
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
+email_address: vanky0921@gmail.com
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
