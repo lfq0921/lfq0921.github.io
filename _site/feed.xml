@@ -5,17 +5,134 @@
     <description>Far Far Away</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 23 Apr 2024 06:17:10 -0700</pubDate>
-    <lastBuildDate>Tue, 23 Apr 2024 06:17:10 -0700</lastBuildDate>
+    <pubDate>Tue, 23 Apr 2024 07:19:56 -0700</pubDate>
+    <lastBuildDate>Tue, 23 Apr 2024 07:19:56 -0700</lastBuildDate>
     <generator>Jekyll v4.3.3</generator>
     
       <item>
         <title>Test</title>
-        <description>
+        <description>&lt;p&gt;&lt;img src=&quot;image.png&quot; alt=&quot;alt text&quot; /&gt;
+图片插入test（直接复制截屏）
+&lt;img src=&quot;/img/avatar_tomato.jpg&quot; alt=&quot;&quot; /&gt;相对路径插入&lt;/p&gt;
+
+&lt;p&gt;缩进测试&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;你在这里呀
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </description>
         <pubDate>Tue, 23 Apr 2024 00:00:00 -0700</pubDate>
         <link>http://localhost:4000/2024/04/23/test/</link>
         <guid isPermaLink="true">http://localhost:4000/2024/04/23/test/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>这个blog如何诞生</title>
+        <description>&lt;p&gt;想要一个自己的blog也不是一天两天了。经过多多多多次尝试，终于找到了可持续使用的一款。（鼓掌）&lt;/p&gt;
+
+&lt;h5 id=&quot;一句话介绍自己挑战&quot;&gt;一句话介绍自己挑战&lt;/h5&gt;
+&lt;p&gt;本博客使用GitPage + Jekyll制作&lt;/p&gt;
+
+&lt;h2 id=&quot;blog制作过程公开&quot;&gt;BLOG制作过程公开&lt;/h2&gt;
+&lt;h3 id=&quot;准备工作&quot;&gt;准备工作&lt;/h3&gt;
+&lt;h4 id=&quot;准备一个github仓库&quot;&gt;准备一个GitHub仓库&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;repo的名字需要&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;把repo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone&lt;/code&gt;到本地&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;理论上来说，如果此时能有一个index.html的话，点开&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://&amp;lt;username&amp;gt;.github.io&lt;/code&gt;就可以看到自己的blog首页了。但因为我肯定不会自己手搓网页，所以干脆没有做这步，后面直接fork的现成的Jekyll主题。&lt;/p&gt;
+
+&lt;h4 id=&quot;环境配置&quot;&gt;环境配置&lt;/h4&gt;
+&lt;p&gt;参考&lt;a href=&quot;https://docs.github.com/zh/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll&quot;&gt;官方文档&lt;/a&gt;下载了Ruby，结果不知道为什么，下载的依然是2022年2.6的旧版，导致在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install Jekyll&lt;/code&gt;的时候出现如下报错：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;ERROR:  Error installing jekyll:
+	The last version of rouge (&amp;gt;= 3.0, &amp;lt; 5.0) to support your Ruby &amp;amp; RubyGems was 3.30.0. Try installing it with `gem install rouge -v 3.30.0` and then running the current command again
+	rouge requires Ruby version &amp;gt;= 2.7. The current ruby version is 2.6.10.210.
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;于是努力寻找更新Ruby的方法。找到了一篇&lt;strong&gt;特别好特别新&lt;/strong&gt;的&lt;a href=&quot;https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/#start-here-if-you-choose-the-long-and-manual-route&quot;&gt;教程文章&lt;/a&gt;，不用sudo就能安全安装最新版Ruby。&lt;/p&gt;
+
+&lt;h5 id=&quot;安装jekyll&quot;&gt;安装Jekyll&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ gem install jekyll
+$ gem install jekyll bundler
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h5 id=&quot;安装bundler&quot;&gt;安装bundler&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ gem install bundler
+$ gem update bundler
+$ bundler install
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;怎么会有几个重复的指令，记不清楚了，但是这三条我按顺序跑过一遍。&lt;/p&gt;
+&lt;h5 id=&quot;本地运行后面再用&quot;&gt;本地运行（后面再用）&lt;/h5&gt;
+&lt;p&gt;两种指令&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ bundle exec jekyll serve  
+$ jekyll serve 
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;运行成功之后会给出一个网址，在浏览器打开就能看见本地服务器的页面。回到terminal后按control+C就退出服务器。&lt;/p&gt;
+
+&lt;h3 id=&quot;建设过程&quot;&gt;建设过程&lt;/h3&gt;
+&lt;h4 id=&quot;挑选主题&quot;&gt;挑选主题&lt;/h4&gt;
+&lt;p&gt;本博客选用了&lt;a href=&quot;https://keysaim.github.io/post/blog/2017-08-15-how-to-setup-your-github-io-blog/&quot;&gt;此教程&lt;/a&gt;推荐的&lt;a href=&quot;https://github.com/Huxpro/huxpro.github.io&quot;&gt;主题&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;在fork主题的时候出现了一点问题。可以看到，我刚刚带的主题链接其实是此主题的作者的个人博客，所以里面有大量的私人设置和私人博文，所以修改起来很麻烦。因此善良的主题作者还提供了稳定版的模版。使用&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ git clone git@github.com:Huxpro/huxblog-boilerplate.git
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;即可获得。更多说明可见&lt;a href=&quot;https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md&quot;&gt;主题作者的README文档&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;但我不知道是因为第一次直接下载了作者的个人repo还是因为其他原因，template那版每次放上GitPage就会报错。本着代码能跑就行的philosophy，我来回尝试了几次之后放弃用稳定版模版，还是选择和原来一样直接用了作者自己博客的仓库。（这里提示一下，如果同样要这么做的话，一定要先把作者的仓库fork到自己这再clone或者做其他的，不然一不小心可能就提交到原作者那里去了。）&lt;/p&gt;
+
+&lt;p&gt;因为懒得&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rm -rf /.git&lt;/code&gt;，把整个repo clone下来后，我就直接把所有文件复制粘贴到我自己的blog文件夹里。&lt;/p&gt;
+
+&lt;p&gt;此时此刻，&lt;/p&gt;
+&lt;h5 id=&quot;本地运行后面再用-1&quot;&gt;本地运行（后面再用）&lt;/h5&gt;
+&lt;p&gt;两种指令&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ bundle exec jekyll serve  
+$ jekyll serve 
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;运行成功之后会给出一个网址，在浏览器打开就能看见本地服务器的页面。回到terminal后按control+C就退出服务器。&lt;/p&gt;
+
+&lt;h5 id=&quot;推送github&quot;&gt;推送GitHub&lt;/h5&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;$ git add .
+$ git commit -m &quot;&amp;lt;msg&amp;gt;&quot;
+$ git push -u &amp;lt;origin&amp;gt; &amp;lt;branch&amp;gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;就可以访问&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://&amp;lt;username&amp;gt;.github.io&lt;/code&gt;看到自己（别人）的博客了！&lt;/p&gt;
+
+&lt;p&gt;至此，博客基建已完成！接下来要做的无非是缝缝补补，修修改改，作者在&lt;a href=&quot;https://github.com/Huxpro/huxpro.github.io/blob/master/_doc/README.zh.md&quot;&gt;README文档&lt;/a&gt;里已经有了比较详细的解释。&lt;/p&gt;
+
+&lt;p&gt;对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;进行一个补充。需要在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rakefile&lt;/code&gt;里更改&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;author&lt;/code&gt;的默认设定，不然博客上显示的发布者名字会是错误的。&lt;/p&gt;
+
+&lt;p&gt;对&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rake&lt;/code&gt;的使用指令摘录如下：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;rake post title=&quot;Test&quot; subtitle=&quot;subtitle&quot;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;（题目和小标题都支持中文）&lt;/p&gt;
+
+&lt;p&gt;尝试了一下更换网站图片很方便，不需要图床，写相对路径就可以了。&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 23 Apr 2024 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2024/04/23/blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/04/23/blog/</guid>
+        
+        <category>赛博世界也要留下trace</category>
         
         
       </item>
