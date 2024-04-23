@@ -1,9 +1,9 @@
 # Site settings
 title: Fanqi Blog
-SEOTitle: 林凡琪的博客 | Fanqi Blog
+SEOTitle: Fanqi Blog
 header-img: img/bg-me-boston.JPG
 email: vanky0921@gmail.com
-description: "Far Far Away"
+description: "Far Free"
 keyword: "林凡琪, blog, Fanqi Lin"
 url: "https://lfq0921.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
@@ -92,5 +92,5 @@ page-mathjax: false
 # Friends
 friends:
   [
-    { title: "林凡琪", href: "https://lfq0921.github.io" },
+    { title: "leaf", href: "https://zxyleaf.github.io/" },
   ]
