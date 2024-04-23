@@ -20,7 +20,7 @@ const PRECACHE_LIST = [
   "./js/hux-blog.min.js",
   "./js/snackbar.js",
   "./img/icon_wechat.png",
-  "./img/avatar-tomato.",
+  "./img/avatar-tomato.jpg",
   "./img/home-bg-sunrise.JPG",
   "./img/404-bg.jpg",
   "./css/hux-blog.min.css",

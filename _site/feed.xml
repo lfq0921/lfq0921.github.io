@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fanqi Blog</title>
+    <description>Far Far Away</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 23 Apr 2024 06:17:10 -0700</pubDate>
+    <lastBuildDate>Tue, 23 Apr 2024 06:17:10 -0700</lastBuildDate>
+    <generator>Jekyll v4.3.3</generator>
+    
+      <item>
+        <title>Test</title>
+        <description>
+</description>
+        <pubDate>Tue, 23 Apr 2024 00:00:00 -0700</pubDate>
+        <link>http://localhost:4000/2024/04/23/test/</link>
+        <guid isPermaLink="true">http://localhost:4000/2024/04/23/test/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
