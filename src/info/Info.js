@@ -1,4 +1,4 @@
-import self from "../img/self.png"
+
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
@@ -26,7 +26,7 @@ export const info = {
     lastName: "Lin",
     initials: "fl",
     position: "an MSCE Student at Northwestern University",
-    selfPortrait: self,
+    selfPortrait: "/assets/avatar.png",
     resume: "/resume.pdf", // Put your resume PDF in the 'public' folder
     gradient: `-webkit-linear-gradient(135deg, ${colors})`,
     baseColor: colors[0],

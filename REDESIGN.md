@@ -1,17 +1,13 @@
-# Fanqi Lin — Personal Website
+# Fanqi Lin — Pixel Portfolio
 
-A pastoral, pixel-inspired redesign of Fanqi Lin's personal portfolio.
+A fully pixel-styled RPG personal website with wooden menus, parchment panels, pixel typography and custom SVG icons. The original photo is replaced by an original female avatar with black shoulder-length hair and straight bangs.
 
-## Preview and build
+## Preview
 
-- `npm ci` installs the existing project dependencies.
-- `npm start` launches the development preview.
-- `npm run build` produces the static site in `build/` for GitHub Pages.
+Run `npm ci`, then `npm start`. Run `npm run build` for GitHub Pages output in `build/`.
 
-The React entry is `src/App.js`; visual styling is in `src/farm.css`. Update profile, projects, and journey in `src/info/Info.js`. The resume is `public/resume.pdf`.
+Main interface: `src/App.js`. Styling: `src/farm.css`. Personal information: `src/info/Info.js`. Resume: `public/resume.pdf`. Avatar: `public/assets/avatar.png`. Pixelify Sans and VT323 are self-hosted in `public/fonts/` with their OFL licenses.
 
-Personal content was recovered from the deployed `gh-pages` source map because `master` still contained template data. The original resume was recovered from `gh-pages` as well. Landscape artwork is original inline SVG; no game assets are required. Google Fonts are optional; system fallbacks remain available.
+## Avatar provenance
 
-Verified: production build; desktop browser rendering; day/night toggle; AI project filtering. Responsive rules are included but a mobile viewport was unavailable for browser verification.
-
-No remote changes or production deployment have been made. The root CNAME belongs to the original template and should not be copied into a deployment; the build intentionally contains no CNAME.
+Created with the built-in ImageGen tool. Final prompt: Original fictional young female Stardew Valley inspired 16-bit pixel RPG portrait; black shoulder-length bob haircut, straight full blunt bangs, friendly face, green cardigan over cream shirt, brown bag straps; pale sky blue background with square clouds; crisp pixel clusters, limited warm palette; no text, logos, watermark or photographic likeness. Full generation prompt is recorded in `public/assets/avatar-prompt.txt`.
