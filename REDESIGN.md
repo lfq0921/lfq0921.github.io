@@ -6,7 +6,7 @@ A fully pixel-styled RPG personal website with wooden menus, parchment panels, p
 
 Run `npm ci`, then `npm start`. Run `npm run build` for GitHub Pages output in `build/`.
 
-Main interface: `src/App.js`. Styling: `src/farm.css`. Personal information: `src/info/Info.js`. Resume: `public/resume.pdf`. Avatar: `public/assets/avatar.png`. SVBold and SVThin by Omniros are self-hosted in `public/fonts/`, with the SIL OFL and source attribution in `LICENSE-Stardew.txt`. These are community conversions of Stardew Valley letterforms, not official webfont files.
+Main interface: `src/App.js`. Styling: `src/farm.css`. Personal information: `src/info/Info.js`. Resume: `public/resume.pdf`. Avatar: `public/assets/avatar.png`. Pixelify Sans and VT323 are self-hosted in `public/fonts/` with their OFL licenses. These are pixel-style fonts, not the original Stardew Valley fonts.
 
 ## Avatar provenance
 
