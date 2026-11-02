@@ -56,11 +56,11 @@ export const info = {
             label: 'linkedin'
         }
     ],
-    bio: "Hello! I'm Fanqi, an MSCE student at Northwestern University with a B.S. in Computer Science from Nanjing University. I have hands-on experience as an AI Engineer Intern and a strong background in high-performance computing, parallel systems, and full-stack development. I'm passionate about building scalable systems and leveraging AI to solve complex problems.",
+    bio: "Hi, I'm Fanqi, an MSCE student at Northwestern University and a Computer Science graduate of Nanjing University. I work at the intersection of LLM agents, reliable AI systems, and high-performance computing. During my Summer 2026 SDE internship at Amazon, I shipped a tool-calling assistant with Amazon Bedrock and Strands, bringing together SQL-based analytics, grounded answers, and deterministic citations. I enjoy turning complex systems into practical, dependable tools.",
     skills: {
         'Languages': ['C/C++', 'Python', 'Go', 'Java', 'SQL', 'Verilog', 'LaTeX'],
-        'AI & Systems': ['Distributed Systems', 'HPC (OpenMP)', 'RAG', 'LLM Agents', 'PyTorch', 'Linux Kernel', 'Computer Architecture'],
-        'Infrastructure & Tools': ['Docker', 'Git', 'CMake', 'Vim', 'VS Code', 'Qt', 'Conda', 'Linux Shell (Bash/Zsh)']
+        'AI & Systems': ['Amazon Bedrock', 'Strands Agents SDK', 'Tool Calling', 'Distributed Systems', 'HPC (OpenMP)', 'RAG', 'LLM Agents', 'PyTorch', 'Linux Kernel', 'Computer Architecture'],
+        'Infrastructure & Tools': ['AWS Lambda', 'S3', 'AWS CDK', 'Docker', 'Git', 'CMake', 'Vim', 'VS Code', 'Qt', 'Conda', 'Linux Shell (Bash/Zsh)']
     },
     hobbies: [
         {
@@ -82,6 +82,16 @@ export const info = {
     ],
     // Journey: Education & Experience combined, sorted by most recent first
     journey: [
+        {
+            type: "experience",
+            startDate: "Jun 2026",
+            endDate: "Sep 2026",
+            title: "Software Development Engineer Intern",
+            company: "Amazon",
+            location: "Seattle, Washington, U.S.",
+            description: "Built and shipped a tool-calling LLM assistant with Amazon Bedrock and Strands Agents SDK. Designed five domain tools with deterministic citations, pushed large-scale billing aggregation into SQL, and migrated payment queries to an analytics data mart. Delivered the migration with 145 tests passing and reduced mypy issues from 86 to zero.",
+            logo: ""
+        },
         // Education
         {
             type: "education",
@@ -127,6 +137,12 @@ export const info = {
     ],
     // Projects from resume
     portfolio: [
+        {
+            title: "Enterprise Billing Assistant — Amazon",
+            date: "Jun 2026 - Sep 2026",
+            description: "Built and shipped an enterprise tool-calling LLM assistant using Amazon Bedrock and Strands Agents SDK. Implemented five domain tools with citations assembled deterministically in tool code to prevent fabricated references. Moved aggregation into SQL over a 400M+ row invoice table, replacing 22k–36k-token query inputs with tool-computed totals. Migrated payment queries to an analytics data mart and validated join correctness over 437M rows. Landed the migration with 145 tests passing and mypy issues reduced from 86 to zero.",
+            skills: ["Amazon Bedrock", "Strands Agents SDK", "LLM", "Tool Calling", "SQL", "Python", "AWS Lambda"]
+        },
         {
             title: "GPU-Accelerated Stereo Vision & Depth Estimation System",
             date: "Jan 2026 - Present",
