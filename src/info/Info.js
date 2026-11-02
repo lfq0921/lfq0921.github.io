@@ -1,9 +1,4 @@
 import self from "../img/self.png"
-import mock1 from "../img/mock1.png"
-import mock2 from "../img/mock2.png"
-import mock3 from "../img/mock3.png"
-import mock4 from "../img/mock4.png"
-import mock5 from "../img/mock5.png"
 
 /* Hi there! Thanks for checking out my portfolio template. Be sure to read the comments to get a better understanding of
 how to make this template work best for you! */
@@ -27,118 +22,152 @@ of what each of the values mean.
  */
 
 export const info = {
-    firstName: "John",
-    lastName: "Smith",
-    initials: "js", // the example uses first and last, but feel free to use three or more if you like.
-    position: "a Full Stack Developer",
-    selfPortrait: self, // don't change this unless you want to name your self-portrait in the "img" folder something else!
-    gradient: `-webkit-linear-gradient(135deg, ${colors})`, // don't change this either
+    firstName: "Fanqi",
+    lastName: "Lin",
+    initials: "fl",
+    position: "an MSCE Student at Northwestern University",
+    selfPortrait: self,
+    resume: "/resume.pdf", // Put your resume PDF in the 'public' folder
+    gradient: `-webkit-linear-gradient(135deg, ${colors})`,
     baseColor: colors[0],
-    miniBio: [ // these are just some "tidbits" about yourself. You can look at mine https://paytonjewell.github.io/#/ for an example if you'd like
-        {
-            emoji: '☕',
-            text: 'fueled by coffee'
-        },
+    miniBio: [
         {
             emoji: '🌎',
-            text: 'based in the US'
+            text: 'Based in Evanston, IL, U.S.'
         },
         {
-            emoji: "💼",
-            text: "Systems Engineer at Google"
+            emoji: "📖",
+            text: "MSCE @ Northwestern University"
         },
         {
-            emoji: "📧",
-            text: "johnsmith@gmail.com"
+            emoji: "📮",
+            text: "fanqilinn@gmail.com"
         }
     ],
     socials: [
         {
-            link: "https://facebook.com",
-            icon: 'fa fa-facebook',
-            label: 'facebook'
-        },
-        {
-            link: "https://instagram.com",
-            icon: 'fa fa-instagram',
-            label: 'instagram'
-        },
-        {
-            link: "https://github.com",
+            link: "https://github.com/lfq0921",
             icon: "fa fa-github",
             label: 'github'
         },
         {
-            link: "https://linkedin.com",
+            link: "https://www.linkedin.com/in/fanqi-lin/",
             icon: "fa fa-linkedin",
             label: 'linkedin'
-        },
-        {
-            link: "https://twitter.com",
-            icon: "fa fa-twitter",
-            label: 'twitter'
         }
-// Feel free to remove any of these that you don't have. I'll write an FAQ on how to add new ones later, let me know if you have a request for an icon!
-// Just change the links so that they lead to your social profiles.
-
     ],
-    bio: "Hello! I'm John. I'm a systems engineer for Google. I studied CompSci at Harvard, I enjoy long walks on the beach, and I believe artificial intelligence will inevitably rule us all one day. You should hire me!",
-    skills:
-        {
-            proficientWith: ['javascript', 'react', 'git', 'github', 'bootstrap', 'html5', 'css3', 'figma'],
-            exposedTo: ['nodejs', 'python', 'adobe illustrator']
-        }
-    ,
+    bio: "Hello! I'm Fanqi, an MSCE student at Northwestern University with a B.S. in Computer Science from Nanjing University. I have hands-on experience as an AI Engineer Intern and a strong background in high-performance computing, parallel systems, and full-stack development. I'm passionate about building scalable systems and leveraging AI to solve complex problems.",
+    skills: {
+        'Languages': ['C/C++', 'Python', 'Go', 'Java', 'SQL', 'Verilog', 'LaTeX'],
+        'AI & Systems': ['Distributed Systems', 'HPC (OpenMP)', 'RAG', 'LLM Agents', 'PyTorch', 'Linux Kernel', 'Computer Architecture'],
+        'Infrastructure & Tools': ['Docker', 'Git', 'CMake', 'Vim', 'VS Code', 'Qt', 'Conda', 'Linux Shell (Bash/Zsh)']
+    },
     hobbies: [
+        {
+            label: 'photography',
+            emoji: '📷'
+        },
         {
             label: 'reading',
             emoji: '📖'
         },
         {
-            label: 'theater',
-            emoji: '🎭'
+            label: 'debate',
+            emoji: '🗣️'
         },
         {
-            label: 'movies',
-            emoji: '🎥'
-        },
-        {
-            label: 'cooking',
-            emoji: '🌶'
+            label: 'coding',
+            emoji: '💻'
         }
-// Same as above, change the emojis to match / relate to your hobbies or interests.
-// You can also remove the emojis if you'd like, I just think they look cute :P
     ],
-    portfolio: [ // This is where your portfolio projects will be detailed
+    // Journey: Education & Experience combined, sorted by most recent first
+    journey: [
+        // Education
         {
-            title: "Project 1",
-            live: "https://paytonpierce.dev", //this should be a link to the live version of your project, think github pages, netlify, heroku, etc. Or your own domain, if you have it.
-            source: "https://github.com/paytonjewell", // this should be a link to the **repository** of the project, where the code is hosted.
-            image: mock1
+            type: "education",
+            startDate: "Sep 2025",
+            endDate: "Expected Jun 2027",
+            title: "Master of Science in Computer Engineering (MSCE)",
+            company: "Northwestern University",
+            location: "Evanston, Illinois, U.S.",
+            description: "",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Northwestern_Wildcats_logo.svg/1200px-Northwestern_Wildcats_logo.svg.png"
         },
         {
-            title: "Project 2",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock2
+            type: "education",
+            startDate: "Sep 2021",
+            endDate: "Jun 2025",
+            title: "B.S. in Computer Science, Kuangyaming Honors School",
+            company: "Nanjing University",
+            location: "Nanjing, Jiangsu, China",
+            description: "",
+            logo: "/Nanjing_University-logo.svg"
         },
         {
-            title: "Project 3",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock3
+            type: "education",
+            startDate: "Jan 2024",
+            endDate: "May 2024",
+            title: "Exchange Student in Computer Science",
+            company: "University of California, Berkeley",
+            location: "Berkeley, California, U.S.",
+            description: "",
+            logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/1200px-Seal_of_University_of_California%2C_Berkeley.svg.png"
+        },
+        // Experience
+        {
+            type: "experience",
+            startDate: "Jun 2024",
+            endDate: "Aug 2024",
+            title: "AI Engineer Intern",
+            company: "Nanjing Research Institute",
+            location: "Nanjing, China",
+            description: "Conducted cross-language functional audits for a Network-level Load Balancing (NSLB) system. Identified and resolved implementation discrepancies in GPU load distribution logic. Optimized code review workflow by implementing segment-based analysis.",
+            logo: ""
+        }
+    ],
+    // Projects from resume
+    portfolio: [
+        {
+            title: "GPU-Accelerated Stereo Vision & Depth Estimation System",
+            date: "Jan 2026 - Present",
+            description: "Designing a high-performance stereo matching pipeline to compute 3D depth maps from 2D image pairs. Parallelizing the Stereo Rectification and patch-matching processes by offloading computationally intensive cost calculations (SAD) to GPU kernels. Optimizing GPU throughput by implementing Coalesced Memory Access patterns and leveraging shared memory to minimize global memory latency.",
+            skills: ["CUDA", "C++", "OpenCV", "GPU Programming", "Stereo Vision"]
         },
         {
-            title: "Project 4",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock4
+            title: "Legal-RAG Agent: Standardized Benchmark & Efficient LLM System",
+            date: "Nov 2025 - Present",
+            description: "Engineered a standardized evaluation oracle bridging the LegalAgentBench dataset with the A2A protocol, ensuring interoperability and reproducible scoring for legal LLM agents. Architected a Hybrid-RAG system using Voyage 3 Large Embeddings and Matryoshka Representation Learning, achieving an 85% reduction in token usage while supporting 32k context windows. Developed HalluGraph, a novel graph-based audit system that maps agent reasoning steps against a Ground Truth Knowledge Graph to detect subtle semantic hallucinations.",
+            skills: ["LLM", "RAG", "Python", "LangChain", "Knowledge Graph", "NLP"]
         },
         {
-            title: "Project 5",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
-            image: mock5
+            title: "Voice-Activated Intelligent Recipe Assistant",
+            date: "Nov 2025 - Dec 2025",
+            description: "Designed a microservices-based architecture consisting of 3 decoupled components (Voice Client, Rasa Server, Action Server), communicating via RESTful APIs to ensure modularity and scalability. Engineered a robust backend handling 6 distinct query categories, including navigation, parameter extraction, and external API integration, fulfilling complex user requirements with 100% functional coverage.",
+            skills: ["Rasa", "Python", "RESTful APIs", "Microservices", "NLU", "Speech Recognition"]
+        },
+        {
+            title: "High-Performance Computing and Parallel Systems Development",
+            date: "Sep 2025 - Dec 2025",
+            description: "Designed and implemented a multi-process matrix multiplier using ProcessPoolExecutor, achieving near-linear speedup (~3.8× on 4 cores) via efficient task partitioning. Developed a concurrent BFS algorithm, engineering Mutexes and Atomic Operations for thread safety, demonstrating parallel efficiency of over 75%. Optimized image kernels using OpenMP reduction to solve race conditions, achieving ~5× performance improvement over the sequential baseline.",
+            skills: ["C++", "OpenMP", "Python", "Parallel Computing", "Mutex", "Multi-threading"]
+        },
+        {
+            title: "Secure File Sharing System",
+            date: "Feb 2024 - Mar 2024",
+            description: "Built a resilient file-sharing product with robust encryption and HMAC verification, ensuring data integrity in production-grade scenarios. Designed sophisticated permission management APIs to handle dynamic user revocation and access control.",
+            skills: ["Go", "Cryptography", "HMAC", "Security", "API Design"]
+        },
+        {
+            title: "Operating System",
+            date: "Mar 2023 - Jun 2023",
+            description: "Implemented page-based memory management with page tables, handling page faults and disk-RAM swapping. Developed kernel-level threads for parallel execution and cooperative multitasking with coroutines. Created debugging tools, including process tree printing, performance diagnostics, and an interactive shell.",
+            skills: ["C", "Memory Management", "Kernel Development", "Multitasking", "Coroutines"]
+        },
+        {
+            title: "Computer Systems Fundamentals",
+            date: "Sep 2022 - Jan 2023",
+            description: "Developed monitors for single-step execution, memory scanning, and expression evaluation. Implemented RISC-V CPU instructions and device-memory mappings for key peripherals. Built system calls, C library functions, and a file system to support executable programs. Introduced time-sharing multitasking on a single-core CPU.",
+            skills: ["C", "RISC-V", "System Calls", "File System", "CPU Architecture"]
         }
     ]
 }

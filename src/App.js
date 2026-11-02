@@ -1,17 +1,37 @@
-import React from 'react';
-import './App.module.scss';
-import BaseLayout from "./components/BaseLayout";
-import {BrowserRouter} from "react-router-dom";
+import React, {useState} from 'react';
+import {info} from './info/Info';
+import './farm.css';
 
-function App() {
-   return (
-      <div>
-         <BrowserRouter>
-            <BaseLayout/>
-         </BrowserRouter>
-      </div>
-   );
+const icons = ['✦', '⌘', '♧', '▦', '◇', '⚙', '▤'];
+function Landscape(){
+ return <svg className="landscape" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" shapeRendering="crispEdges">
+ <defs><pattern id="grass" width="62" height="49" patternUnits="userSpaceOnUse"><path d="M12 31v-5m-4 5v-3m37 12v-5m4 5v-3" stroke="#658849" strokeWidth="3"/><rect x="29" y="9" width="3" height="3" fill="#e8cf7a"/></pattern><pattern id="roof" width="28" height="18" patternUnits="userSpaceOnUse"><rect width="28" height="18" fill="#b65c43"/><path d="M0 16h28M14 0v16" stroke="#8f493e" strokeWidth="3"/></pattern><g id="tree"><path d="M-6 0h12v-90H-6" fill="#79543f"/><path d="M-45-42h90v-18H34v-20H23v-20H12v-20h-24v20h-11v20h-11v20h-11z" fill="#385e47"/><path d="M-36-60h30v-20H4v-20h8v-20h-24v20h-11v20h-13z" fill="#547e50"/></g></defs>
+ <g className="clouds" fill="#fff4d7"><path d="M50 110h45V95h50v15h33v18H50zM1060 80h40V60h65v20h45v22h-150zM655 155h34v-18h60v18h35v17H655z"/></g>
+ <path d="M0 370v-60h80v-40h70v-35h90v-45h70v35h70v50h90v50h90v-60h75v-60h75v-45h80v40h65v45h70v55h70v-40h80v-55h85v-30h80v35h70v50h60v85z" fill="#a7b8a0"/>
+ <path d="M0 390v-40h110v-40h95v35h90v-45h115v40h100v35h95v-45h95v-45h115v40h90v40h100v-45h90v-40h100v40h100v70z" fill="#7c9b7c"/>
+ <path d="M0 375h1440v325H0z" fill="#93ad66"/><path d="M0 401h1440v299H0z" fill="url(#grass)"/>
+ <path d="M1030 375h100v30h-40v35h-55v35h-65v35h-60v35h-45v45h60v40h120v70H790v-72h-30v-48h30v-45h65v-44h60v-45h60v-40h55z" fill="#72b4b6"/><path d="M1028 415h45m-105 64h42m-171 97h56m-55 65h100" stroke="#bed9bd" strokeWidth="4"/>
+ <path d="M380 700v-78h45v-65h70v-48h170v36H535v50h-55v105z" fill="#d8ba7b"/>
+ <g transform="translate(560 400)"><rect x="-100" y="0" width="210" height="127" fill="#f1d29b"/><path d="M-100 20h210m-210 24h210m-210 24h210m-210 24h210m-210 24h210" stroke="#d7b47d" strokeWidth="4"/><path d="M-130 8v-20h20v-20h20v-20h20v-20h20v-20H60v20h20v20h20v20h20v20h20V8z" fill="url(#roof)" stroke="#714a39" strokeWidth="6"/><rect x="53" y="-110" width="24" height="50" fill="#83533e"/><rect x="-15" y="61" width="43" height="66" fill="#76513c"/><rect x="-76" y="42" width="36" height="39" fill="#7aa6a0" stroke="#855c3e" strokeWidth="6"/><path d="M-58 42v39m-18-20h36" stroke="#f4dfa6" strokeWidth="4"/><rect x="60" y="42" width="31" height="39" fill="#7aa6a0" stroke="#855c3e" strokeWidth="6"/><rect x="16" y="94" width="5" height="5" fill="#e2b65d"/><path d="M-29 131h70v10h-70" fill="#9e7950"/></g>
+ {[40,140,260,1180,1300,1395].map((x,i)=><use key={x} href="#tree" transform={`translate(${x} ${440+i%3*65}) scale(${1+i%2*.3})`}/>)}
+ <g stroke="#8d6745" strokeWidth="6" fill="#d7b27a"><path d="M40 594h235m-235 24h235m805 15h340m-340 24h340"/>{[55,115,175,235,1095,1155,1215,1275,1335,1395].map(x=><path key={x} d={`M${x} ${x<300?580:620}v58`}/>)}</g>
+ <g transform="translate(630 575)"><rect width="110" height="66" fill="#886343"/>{[12,40,68,96].map(x=><g key={x}><path d={`M${x} 18v-18m0 9h-9v-7h9m0 0h9v-8h-9M${x} 54V36m0 9h-9v-7h9m0 0h9v-8h-9`} stroke="#547541" strokeWidth="5"/><rect x={x-4} y="8" width="8" height="8" fill="#d89d58"/></g>)}</g>
+ <g transform="translate(334 564)"><rect x="0" y="0" width="30" height="22" fill="#fff0c4"/><rect x="20" y="-12" width="16" height="20" fill="#fff0c4"/><rect x="24" y="-17" width="8" height="6" fill="#bc5a42"/><rect x="34" y="-6" width="7" height="5" fill="#dba34e"/><path d="M8 22v8m15-8v8" stroke="#ad783e" strokeWidth="4"/></g>
+ </svg>;
 }
-
-
+function App(){
+ const [night,setNight]=useState(false),[filter,setFilter]=useState('All'),[flowers,setFlowers]=useState(0);
+ const filters=['All','AI & Agents','Systems'];
+ const projects=info.portfolio.filter((p,i)=>filter==='All'||(filter==='AI & Agents'?[1,2].includes(i):![1,2].includes(i)));
+ return <div className={night?'farm night':'farm'}>
+ <a className="skip" href="#about">Skip to content</a>
+ <header><a className="brand" href="#home"><span className="sprout">♧</span> FANQI LIN <span className="brand-sub">Systems · AI · Engineering</span></a><nav aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav><button className="time-toggle" onClick={()=>setNight(!night)} aria-label={night?'Switch to daytime':'Switch to nighttime'}>{night?'☾ Night':'☼ Day'}</button></header>
+ <main><section className="hero" id="home"><div className="hero-copy"><span className="eyebrow">PERSONAL WEBSITE / FANQI LIN</span><h1>A little curiosity.<br/>A lot of <em>possibility.</em></h1><p>Hi, I'm <strong>Fanqi Lin.</strong> I build intelligent systems,<br className="desktop"/> explore big ideas, and enjoy the little things.</p><div className="hero-actions"><a className="button green" href="#projects">Explore my work <span>↓</span></a><a className="text-link" href="/resume.pdf" target="_blank" rel="noreferrer">Read my résumé ↗</a></div></div><div className="weather"><span className="weather-icon">{night?'☾':'☀'}</span><div>{night?'A quiet evening':'A good day to grow'}<small>Evanston, Illinois</small></div></div><Landscape/><div className="scene-label">⌖ EVANSTON, IL</div><a className="scroll-note" href="#about">Take the scenic route ↓</a></section>
+ <section className="about section" id="about"><div className="profile-card"><div className="portrait-frame"><img src={info.selfPortrait} alt="Fanqi Lin"/></div><span className="pixel-label">PLAYER ONE</span><h3>Fanqi Lin</h3><p>Engineer. Explorer. Lifelong learner.</p><div className="profile-rule"/><span>♥ ♥ ♥ ♥ ♥</span><small>Curiosity level: always increasing</small></div><div className="about-copy"><div className="section-kicker">01 / ABOUT ME</div><h2>Growing ideas.<br/>Building things that matter.</h2><p>{info.bio}</p><p className="aside">Away from the keyboard? You'll find me taking photos, getting lost in a book, or enjoying a good debate.</p><div className="status-row"><span>⌖ Evanston, IL</span><span>♧ MSCE @ Northwestern</span></div><a className="text-link" href="#contact">Leave a note in my mailbox ↗</a></div></section>
+ <section className="projects-section" id="projects"><div className="section"><div className="section-top"><div><div className="section-kicker">02 / SELECTED PROJECTS</div><h2>Things I've built.</h2><p>From low-level systems to intelligent agents. Made with care.</p></div><span className="board-stamp">IDEAS → REALITY</span></div><div className="filters" role="group" aria-label="Filter projects">{filters.map(f=><button key={f} aria-pressed={filter===f} onClick={()=>setFilter(f)}>{f}</button>)}</div><div className="project-grid">{projects.map(p=>{const i=info.portfolio.indexOf(p);return <article className="project" key={p.title}><div className={'project-art art-'+i} aria-hidden="true"><span>{icons[i]}</span><div className="art-grid"/><small>PROJECT / 0{i+1}</small></div><div className="project-content"><span className="project-date">{p.date}</span><h3>{p.title}</h3><p>{p.description.split('. ')[0]}.</p><div className="tags">{p.skills.slice(0,3).map(s=><span key={s}>{s}</span>)}</div><details><summary>Project details <span>＋</span></summary><p>{p.description}</p><div className="tags">{p.skills.slice(3).map(s=><span key={s}>{s}</span>)}</div></details></div></article>})}</div></div></section>
+ <section className="section journey" id="journey"><div><div className="section-kicker">03 / EXPERIENCE & EDUCATION</div><h2>Every season<br/>teaches something.</h2><p>A few stops along the way.</p><div className="toolbox"><h3>Skills & tools</h3>{Object.entries(info.skills).map(([name,skills])=><div key={name}><h4>{name}</h4><p>{skills.join(' · ')}</p></div>)}</div></div><div className="timeline">{info.journey.map((j,i)=><article key={j.company}><span className="timeline-dot">{i===0?'♧':'✦'}</span><div className="project-date">{j.startDate} — {j.endDate}</div><h3>{j.company}</h3><p>{j.title}</p><small>{j.location}</small>{j.description&&<p className="journey-description">{j.description}</p>}</article>)}</div></section>
+ <section className="contact-section" id="contact"><div className="section contact-inner"><span className="mail-icon" aria-hidden="true">✉</span><div><div className="section-kicker">04 / THE MAILBOX</div><h2>Good things start with “hello.”</h2><p>Have an idea, a question, or just want to say hi? My mailbox is open.</p><a className="button green" href="mailto:fanqilinn@gmail.com">Send a little hello ↗</a></div><div className="contact-links">{info.socials.map(s=><a key={s.label} href={s.link} target="_blank" rel="noreferrer">{s.label} ↗</a>)}<a href="/resume.pdf" target="_blank" rel="noreferrer">Résumé ↗</a></div></div></section>
+ </main><footer><a className="brand" href="#home">♧ FANQI LIN</a><span>Fanqi Lin · Personal website</span><button className="flower-button" onClick={()=>setFlowers(v=>Math.min(v+1,12))} aria-label="Plant a flower">{flowers?'✿ '.repeat(flowers):'Plant a little kindness ♧'}</button><span className="sr-only" aria-live="polite">{flowers?`${flowers} flowers planted. Thanks for visiting!`:''}</span></footer>
+ </div>
+}
 export default App;
