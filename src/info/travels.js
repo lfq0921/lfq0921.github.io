@@ -332,7 +332,7 @@ export const travels = [
     "visits": [
       {
         "date": "Dec 2025",
-        "companions": "My partner"
+        "companions": "My boyfriend"
       }
     ]
   },
@@ -345,7 +345,7 @@ export const travels = [
     "visits": [
       {
         "date": "Jan 2026",
-        "companions": "My partner"
+        "companions": "My boyfriend"
       }
     ]
   },
@@ -358,7 +358,7 @@ export const travels = [
     "visits": [
       {
         "date": "Jan 2026",
-        "companions": "My partner"
+        "companions": "My boyfriend"
       }
     ]
   },
